@@ -55,6 +55,10 @@ dependencies {
     compile "org.hibernate:hibernate-core:5.4.0.Final"
     compile "org.grails.plugins:gsp"
     compileOnly "io.micronaut:micronaut-inject-groovy"
+    compile 'org.grails.plugins:jms:2.0.0.RC2'
+    compile 'org.springframework:spring-jms:5.1.5.RELEASE'
+    compile 'javax.jms:javax.jms-api:2.0.1'
+    runtime 'org.apache.activemq:activemq-spring:5.15.8'
     console "org.grails:grails-console"
     profile "org.grails.profiles:web"
     runtime "org.glassfish.web:el-impl:2.1.2-b03"
