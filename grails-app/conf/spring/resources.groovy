@@ -10,7 +10,7 @@ beans = {
     // so one to get over from it is to use Bean aliases
 
     // when spring.activemq.pool.enabled=true then SpringBoot will create 'pooledJmsConnectionFactory'
-    //springConfig.addAlias('jmsConnectionFactory', 'pooledJmsConnectionFactory')
+    springConfig.addAlias('jmsConnectionFactory', 'pooledJmsConnectionFactory')
 
     // when spring.jms.cache.enabled=true then SpringBoot will create 'cachingJmsConnectionFactory'
     // This is SpringBoot DEFAULT behaviour

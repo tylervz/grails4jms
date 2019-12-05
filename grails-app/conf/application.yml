@@ -26,7 +26,8 @@ spring:
         password: "activemq"
         pool:
             # when true, then use spring bean alias for 'pooledJmsConnectionFactory' from resources.groovy
-            enabled: false
+            enabled: true
+            max-connections: 50
     jmx:
         unique-names: true
     main:
