@@ -13,12 +13,20 @@ info:
         name: '@info.app.name@'
         version: '@info.app.version@'
         grailsVersion: '@info.app.grailsVersion@'
+
 spring:
+    jms:
+        cache:
+            # when true, then use spring bean alias for 'cachingJmsConnectionFactory' from resources.groovy
+            enabled: false
     activemq:
         brokerUrl: tcp://localhost:61677
         inMemory: false
         user: "activemq"
         password: "activemq"
+        pool:
+            # when true, then use spring bean alias for 'pooledJmsConnectionFactory' from resources.groovy
+            enabled: false
     jmx:
         unique-names: true
     main:
