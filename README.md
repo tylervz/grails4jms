@@ -1,12 +1,7 @@
 # Grails 4 JMS
 
-This is a Grails 4.0.1 application named HelloWorld that attempts to use the
-[Grails JMS plugin](http://plugins.grails.org/plugin/grails/jms).
-
-Currently, the application fails to start because the plugin does not support Grails 4.
-
-The application does not actually send any messages or receive any messages;
-it was merely created to demonstrate that startup fails when including the plugin.
+This is a Grails 4.0.1 application named HelloWorld that uses the
+[Grails JMS plugin](http://plugins.grails.org/plugin/grails/jms) with ActiveMQ and connection pooling.
 
 ## Running the application
 
@@ -21,3 +16,6 @@ and are referenced in the [application.yml](/grails-app/conf/application.yml) fi
 Once you have ActiveMQ running in a Docker container, run the Grails application in IntelliJ or in another terminal with:
 
     grails run-app
+
+You can send requests to `/submission/send?text=hello` to have your message of `"hello"` sent to the queue named `"example"`. See [SubmissionController.groovy](/grails-app/controllers/helloworld/SubmissionController.groovy).
+
